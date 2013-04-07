@@ -1,4 +1,8 @@
-wizard-maker-android
-====================
+Android Wizard Maker Lib
+========================
 
-An API to help developers creating wizard based UI in Android
+An android library to help developers creating wizard based UI in Android
+
+
+Usage
+=====
