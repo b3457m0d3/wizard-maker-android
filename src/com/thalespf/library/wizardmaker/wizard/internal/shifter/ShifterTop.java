@@ -44,6 +44,10 @@ public class ShifterTop extends AbstractShifter {
 	@Override
 	protected View onCreateShifterView() {
 		View view = LayoutInflater.from(wizardActivity).inflate(R.layout.wizard_maker_shifter_view, null);
+		view.findViewById(R.id.shifterLeftButton).setEnabled(false);
+		view.findViewById(R.id.shifterRigthButton).setEnabled(false);
+		TextView t = (TextView) view.findViewById(R.id.shifterPagesText);
+		t.setText("(0/0)");
 		return view;
 	}
 	
@@ -79,3 +83,4 @@ public class ShifterTop extends AbstractShifter {
 	}
 
 }
+

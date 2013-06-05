@@ -255,8 +255,10 @@ public class WizardContainer implements IWizardContainer, ViewPager.OnPageChange
 	 * 
 	 */
 	public void updateShifter() {
-		IWizardPage page = wizard.getPages().get(viewPager.getCurrentItem());
-		shifter.updateShifter(page, viewPager.getCurrentItem(), wizard.getPagesSize() - 1);
+		if(wizard.getPages().size() > 0) {
+			IWizardPage page = wizard.getPages().get(viewPager.getCurrentItem());
+			shifter.updateShifter(page, viewPager.getCurrentItem(), wizard.getPagesSize() - 1);
+		}
 	}
 	
 	/** (non-Javadoc)

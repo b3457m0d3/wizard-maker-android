@@ -43,6 +43,8 @@ public class ShifterBottom extends AbstractShifter {
 	@Override
 	protected View onCreateShifterView() {
 		View view = LayoutInflater.from(wizardActivity).inflate(R.layout.wizard_maker_shifter2_view, null);
+		view.findViewById(R.id.shifterLeftButton).setEnabled(false);
+		view.findViewById(R.id.shifterRigthButton).setEnabled(false);
 		return view;
 	}
 	

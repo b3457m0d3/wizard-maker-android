@@ -9,25 +9,31 @@
         android:id="@+id/shifterLeftButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:src="@drawable/previousbutton32" />
     <!-- android:background="@drawable/round_button" -->
 
     <TextView
         android:id="@+id/shifterPagesText"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="15dp" />
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
 
     <ImageButton
         android:id="@+id/shifterRigthButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:src="@drawable/nextbutton" />
 
     <ImageButton
         android:id="@+id/shifterFinishButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:src="@drawable/save"
         android:visibility="gone" />
 
