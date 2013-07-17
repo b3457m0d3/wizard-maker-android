@@ -66,6 +66,12 @@ public class ShifterTop extends AbstractShifter {
 			ImageButton finishButton = (ImageButton) shifterView.findViewById(R.id.shifterFinishButton);
 			finishButton.setVisibility(View.VISIBLE);
 			finishButton.setEnabled(true);
+			
+			if(page.isRequired() && !page.isPageComplete()) {
+				finishButton.setEnabled(false);
+			} else {
+				finishButton.setEnabled(true);
+			}
 		} else {
 			ImageButton rButton = (ImageButton) shifterView.findViewById(R.id.shifterRigthButton);
 			rButton.setVisibility(View.VISIBLE);
@@ -73,6 +79,12 @@ public class ShifterTop extends AbstractShifter {
 			
 			ImageButton finishButton = (ImageButton) shifterView.findViewById(R.id.shifterFinishButton);
 			finishButton.setVisibility(View.GONE);
+			
+			if(page.isRequired() && !page.isPageComplete()) {
+				rButton.setEnabled(false);
+			} else {
+				rButton.setEnabled(true);
+			}
 		}
 		
 		shifterView.requestLayout();

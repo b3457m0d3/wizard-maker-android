@@ -38,8 +38,20 @@ public class MainActivity extends WizardMakerActivity {
 	 */
 	@Override
 	protected IWizard createWizard() {
-		return createBuyWizard();
+		return createOnePageWizard();
+		//return createBuyWizard();
 		//return createSandwich();
+	}
+
+	/**
+	 * @return
+	 */
+	private IWizard createOnePageWizard() {
+		IWizard wizard = new OnePageWizard();
+		wizard.configure(IWizard.PROPERTY__SHIFTER_VIEW_LOCATION, IWizard.VALUE__SHIFTER_VIEW_LOCATION_BELOW);
+		//wizard.configure(IWizard.PROPERTY__SHIFTER_VIEW_LOCATION, IWizard.VALUE__SHIFTER_VIEW_LOCATION_ABOVE);
+		wizard.configure(IWizard.PROPERTY__REVIEW_PAGE, true);
+		return wizard;
 	}
 
 	/**

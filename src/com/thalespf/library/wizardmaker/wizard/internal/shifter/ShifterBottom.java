@@ -78,7 +78,7 @@ public class ShifterBottom extends AbstractShifter {
 			}
 		}
 		
-		if(page instanceof ReviewWizardPage) {
+		if(page instanceof ReviewWizardPage || !page.canShiftNextPage()) {
 			rigthButton.setText(R.string.finish);
 			//rigthButton.setBackgroundResource(R.drawable.finish_background);
 			//rigthButton.setTextAppearance(wizardActivity, R.style.TextAppearanceFinish);
