@@ -104,5 +104,10 @@ public interface IWizardPage {
 	public void onCreateView(LayoutInflater inflater, View rootView);
 	
 	public Context getContext();
+
+	/**
+	 * @return
+	 */
+	boolean isLastPage();
 	
 }

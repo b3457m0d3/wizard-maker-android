@@ -93,6 +93,17 @@ public abstract class WizardPage implements IWizardPage {
 		return false;
 	}
 	
+	/** (non-Javadoc)
+	 * @see com.thalespf.library.wizardmaker.wizard.IWizardPage#isLastPage()
+	 */
+	@Override
+	public boolean isLastPage() {
+		if(!(this instanceof BranchPage) && wizard.getNextPage(this) == null) {
+			return true;
+		}
+		return false;
+	}
+	
 	/**
 	 * 
 	 * 
